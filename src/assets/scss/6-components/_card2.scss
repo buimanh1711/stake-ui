@@ -1,0 +1,21 @@
+.card2 {
+  border: 1px solid #e7e7e7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 24px;
+  padding: 20px;
+
+  &__heading {
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 700;
+  }
+
+  &__list {
+    list-style: disc;
+  }
+
+  &__item {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
