@@ -5,6 +5,10 @@
     background-position: center;
     padding: 32px;
     border-radius: 48px;
+    @include media-breakpoint-down(sm) {
+        padding: 28px 16px;
+        border-radius: 32px;
+    }
     .events-list {
         display: flex;
         align-items: center;
@@ -21,11 +25,19 @@
         p {
             margin: 0 0 20px;
         }
-        .btn-unstake {
-            padding: 0px 48px;
-            border-radius: 50px;
-            font-weight: 700;
-            line-height: 48px;
+        .nav-btn {
+            .btn-unstake {
+                padding: 0px 48px;
+                border-radius: 50px;
+                font-weight: 700;
+                line-height: 48px;
+            }
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+                .btn-unstake {
+                    width: 100%;
+                }
+            }
         }
     }
     .total-staked {

@@ -6,7 +6,6 @@ import router from './router';
 import { VueDapp } from 'vue-dapp';
 import type jQuery from 'jquery';
 import VueClipboard from 'vue3-clipboard';
-// Import our custom CSS
 import '../src/assets/scss/styles.scss';
 
 declare global {

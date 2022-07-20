@@ -1,8 +1,8 @@
 <script lang="ts">
-import {defineComponent} from "vue";
-import {shortenAddress, useBoard, useEthers} from "vue-dapp";
-import Board from "@/components/wallet/Board.vue";
-import {useConnectors} from "@/components/wallet/composables/useConnectors";
+import { defineComponent } from 'vue';
+import { shortenAddress, useBoard, useEthers } from 'vue-dapp';
+import Board from '@/components/wallet/Board.vue';
+import { useConnectors } from '@/components/wallet/composables/useConnectors';
 
 export default defineComponent({
   components: {
@@ -27,7 +27,7 @@ export default defineComponent({
     setRef() {
       let ref: any = this.$route.query.ref;
       if (ref) {
-        localStorage.setItem("ref", ref);
+        localStorage.setItem('ref', ref);
       }
     },
   },
@@ -52,10 +52,8 @@ export default defineComponent({
     <div class="collapse navbar-collapse" id="navbarMenu">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <RouterLink class="nav-link" to="/ipo"
-          >IPO
-          </RouterLink>
-          <i class="nav-item-icon-live"></i>
+          <RouterLink class="nav-link" to="/ipo">IPO </RouterLink>
+          <!-- <i class="nav-item-icon-live"></i> -->
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/#howtoearn">How to earn</a>
@@ -81,9 +79,9 @@ export default defineComponent({
         <a v-if="isActivated" class="btn btn-dark btn-connection">{{
           shortenAddress(address)
         }}</a>
-        <a v-else class="btn btn-dark btn-connection" @click="open"
+        <!-- <a v-else class="btn btn-dark btn-connection" @click="open"
           >Connect Wallet</a
-        >
+        > -->
       </div>
     </div>
   </nav>

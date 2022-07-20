@@ -4,6 +4,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        h4 {
+            font-weight: 600;
+        }
     }
     &-content {
         background: #ffffff;
@@ -40,32 +43,89 @@
                 }
             }
         }
-        .apr {
+        .actions {
+            justify-content: flex-end;
             display: flex;
-            justify-content: space-between;
+            align-items: center;
+            .bi {
+                transition: all 0.3s ease;
+            }
+            .bi[aria-expanded="true"] {
+                transform: rotate(180deg);
+            }
+            .nav-btn {
+                margin-right: 16px;
+                a {
+                    border-radius: 16px;
+                    padding: 6px 36px;
+                    font-weight: 600;
+                }
+                .btn-pal {
+                    padding: 6px 24px;
+                    border: 1px solid #000;
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-down(sm) {
+    .pool {
+        &-header {
+            display: unset;
+        }
+        &-content {
+            padding: 16px;
             .actions {
+                .nav-btn {
+                    width: 100%;
+                    a {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.stake-modal {
+    .modal-body {
+        .payments {
+            .payment-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+        .counter {
+            margin: 16px 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #fcfcfc;
+            border: 1px solid #e4e4e4;
+            border-radius: 20px;
+            padding: 16px 24px;
+            &-right {
                 display: flex;
                 align-items: center;
-                .bi {
-                    transition: all 0.3s ease;
+                img {
+                    margin: 0 8px;
                 }
-                .bi[aria-expanded="true"] {
-                    transform: rotate(180deg);
+                .max {
+                    background: rgba(101, 207, 88, 0.33);
+                    border-radius: 100px;
+                    padding: 6px 16px;
+                    font-weight: 600;
                 }
-                .nav-btn {
-                    .btn-stake {
-                        margin-right: 16px;
-                    }
-                    a {
-                        border-radius: 16px;
-                        padding: 6px 36px;
-                        font-weight: 600;
-                    }
-                    .btn-pal {
-                        padding: 6px 24px;
-                        border: 1px solid #000;
-                    }
-                }
+            }
+        }
+        .btn-submit {
+            a {
+                width: 100%;
+                padding: 12px;
+                border-radius: 100px;
+                font-weight: 600;
+                font-size: 20px;
             }
         }
     }
