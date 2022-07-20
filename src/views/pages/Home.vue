@@ -1,26 +1,26 @@
 <script lang="ts">
-import { ref, defineComponent } from "vue";
-import axios from "axios";
+import { ref, defineComponent } from 'vue';
+import axios from 'axios';
 
 export default defineComponent({
   setup() {
-    const email = ref<string>("");
-    const messageSubscription = ref<string>("");
+    const email = ref<string>('');
+    const messageSubscription = ref<string>('');
     const subscript = () => {
       axios
-        .get("https://api.palmare.io/", {
+        .get('https://api.palmare.io/', {
           params: {
             email: email,
           },
           insecureHTTPParser: true,
-          headers: { "Access-Control-Allow-Origin": "*" },
+          headers: { 'Access-Control-Allow-Origin': '*' },
         })
         .then(function (response) {
           messageSubscription.value = response.data.data;
         })
         .catch((e: any) => {
           messageSubscription.value =
-            "Error! An error occurred. Please try again later";
+            'Error! An error occurred. Please try again later';
         });
     };
     return {
@@ -476,7 +476,12 @@ export default defineComponent({
           </a>
         </div>
         <div class="text-center m-4">
-          <a href="https://medium.com/@PalmareOfficial" target="_blank" class="btn btn--read-more">View more</a>
+          <a
+            href="https://medium.com/@PalmareOfficial"
+            target="_blank"
+            class="btn btn--read-more"
+            >View more</a
+          >
         </div>
       </div>
     </div>
